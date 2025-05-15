@@ -13,7 +13,7 @@ const path = require('path');
 
 (async () => {
   db = await open({
-    filename: path.join(__dirname, '../bd4_assignment2_database.sqlite'),
+    filename: './bd4_assignment2_database.sqlite',
     driver: sqlite3.Database,
   });
 })();
@@ -392,8 +392,8 @@ app.get('/', (req, res) => {
   return res.status(200).json('WELCOME');
 });
 
-//module.exports = app;
+module.exports = app;
 
-app.listen(PORT, () => {
-  console.log('Server running at port 3000');
-});
+// app.listen(PORT, () => {
+//   console.log('Server running at port 3000');
+// });
